@@ -1,0 +1,38 @@
+[project]
+name = "qgbot"
+version = "0.1.0"
+description = "QQ 官方机器人 Markdown 消息构造 SDK"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "MimoKit" }]
+keywords = ["qq", "qqbot", "markdown", "keyboard", "sdk"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
+
+# 纯标准库实现，不引入任何依赖：这个 SDK 只负责拼字符串和 JSON，
+# 不碰网络、不碰框架，方便被任何 bot 框架直接 import。
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "ruff>=0.6"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
