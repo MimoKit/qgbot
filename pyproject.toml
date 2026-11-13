@@ -1,5 +1,5 @@
 [project]
-name = "qgbot"
+name = "qqbot-md-sdk"
 version = "0.1.0"
 description = "QQ 官方机器人 Markdown 消息构造 SDK"
 readme = "README.md"
@@ -21,6 +21,12 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/MimoKit/qgbot"
+Repository = "https://github.com/MimoKit/qgbot"
+Issues = "https://github.com/MimoKit/qgbot/issues"
+Documentation = "https://github.com/MimoKit/qgbot/tree/main/docs"
 
 [build-system]
 requires = ["pdm-backend"]
